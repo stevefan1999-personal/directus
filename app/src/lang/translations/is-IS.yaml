@@ -190,7 +190,6 @@ save_and_create_new: Vista og Búa til Nýtt
 save_as_copy: Vista sem Afrit
 comments: Athugasemdir
 no_items: Engir hlutir
-search_items: Leita að hlutum...
 disabled: Óvirkt
 information: Upplýsingar
 report_bug: Tilkynna Galla
@@ -632,6 +631,7 @@ operations:
     name: Senda Tilkynningu
     recipient: Notandi
     message: Skilaboð
+    subject: Viðfangsefni
   request:
     url: URL
     method: Aðferð

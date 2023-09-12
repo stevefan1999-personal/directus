@@ -81,9 +81,9 @@ message: پیام
 delete_panel: حذف پنل
 create_webhook: ساخت وب هوک
 create_custom_translation: ایجاد ترجمه جدید
-edit_custom_translation: ویرایش ترجمه
-no_custom_translations: بدون ترجمه
-no_custom_translations_copy: هنوز هیچ ترجمه ای وجود ندارد
+edit_custom_translation: نگارش ترجمه سفارشی
+no_custom_translations: بدون ترجمه سفارشی
+no_custom_translations_copy: هنوز هیچ ترجمه سفارشی وجود ندارد.
 invite_users: دعوت کاربران
 invite: دعوت
 email_already_invited: قبلاً برای ایمیل {email}، دعوت نامه ارسال شده است
@@ -226,7 +226,7 @@ bigInteger: عدد صحیح بزرگ
 boolean: بولین
 date: تاریخ
 date_range: بازه تاریخ
-translation_key_placeholder: ورود یک کلید...
+translation_key_placeholder: یک کلید وارد کنید...
 datetime: تاریخ و ساعت
 dateTime: تاریخ و ساعت
 precision: دقت
@@ -439,7 +439,7 @@ checksum: Checksum
 owner: مالک
 edited_by: ویرایش شده توسط
 folder: پوشه
-folders: پوشه ها
+folders: پوشه‌ها
 zoom: بزرگنمايی
 download: دانلود
 open: باز
@@ -459,11 +459,6 @@ open_file_in_tab: فایل را در تب جدید باز کنید
 start_export: شروع برون بری
 not_available_for_local_downloads: برای دانلودهای محلی در دسترس نیست
 exporting_all_items_in_collection: برون‌بری {total} مورد از {collection}.
-exporting_limited_items_in_collection: برون بری حداقل {limit} از مجموع {total} مورد از {collection}.
-exporting_no_items_to_export: موردی برای برون بری وجود ندارد پیکربندی برون بری را در زیر تنظیم کنید.
-exporting_download_hint: پس از تکمیل، این فایل {format} به طور خودکار در دستگاه شما دانلود می شود.
-exporting_batch_hint: این برون بری به صورت دسته‌ای پردازش می‌شود و پس از تکمیل، فایل {format} در کتابخانه فایل ذخیره می‌شود.
-exporting_batch_hint_forced: به دلیل تعداد زیاد موارد، این برون بری باید به صورت دسته‌ای پردازش شود و پس از تکمیل، فایل {format} در کتابخانه فایل ذخیره می‌شود.
 collection_key: کلید اصلی مجموعه
 name: نام
 primary_key_field: فیلد کلید اصلی
@@ -492,7 +487,6 @@ expand: گسترش
 collapse: جمع کردن
 select_item: انتخاب آیتم
 no_items: آیتمی وجود ندارد
-search_items: جستجوی آیتمها...
 disabled: غیرفعال شده
 information: اطلاعات
 report_bug: گزارش باگ
@@ -2109,6 +2103,10 @@ operations:
     key: ID ها
     payload: ظرفیت یا Payload
     query: کوئری
+  json-web-token:
+    payload: ظرفیت یا Payload
+    token: توکن
+    options: گزینه‌ها
   log:
     name: ذخیره رخداد در کنسول
     description: خروجی چیزی به کنسول
@@ -2129,6 +2127,7 @@ operations:
     recipient_placeholder: یک UUID وارد کنید...
     recipient_note: UUID کاربر را وارد و اینتر بزنید...
     message: پیام
+    subject: موضوع
   request:
     name: وب‌هوک / درخواست URL
     description: 'ساخت یک درخواست به URL'

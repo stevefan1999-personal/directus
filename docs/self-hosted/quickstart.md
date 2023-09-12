@@ -9,9 +9,10 @@ description:
 
 ## Install Docker
 
-You should have [Docker](https://docs.docker.com/get-docker/) installed and running on your machine.
+You should have Docker installed and running on your machine. You can
+[download it here](https://docs.docker.com/get-docker/).
 
-:::info What Is Docker?
+::: info What Is Docker?
 
 Docker is a developer tool that allows software-creators to distribute their work along with all dependencies and
 required environment settings. This means that applications can run reliably and consistently, making it the perfect way
@@ -24,7 +25,11 @@ As soon as there are new releases of Directus, we publish them on
 
 ## Create a Docker Compose File
 
-Create a new empty directory, and open it in a text editor. Create a `docker-compose.yml` file and paste the following:
+Create a new empty folder on your Desktop called `directus`.
+
+Open a text editor such as Visual Studio Code, nano, Vim, TextEdit, or Notepad.
+
+Copy and paste the following and save the file as `docker-compose.yml`:
 
 ```yml
 version: '3'
@@ -41,6 +46,8 @@ services:
       SECRET: 'replace-with-random-value'
       ADMIN_EMAIL: 'admin@example.com'
       ADMIN_PASSWORD: 'd1r3ctu5'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/directus/database/data.db'
       WEBSOCKETS_ENABLED: true
 ```
 
@@ -55,6 +62,7 @@ Save the file. Let's step through it:
   - `KEY` and `SECRET` are required and should be long random values. `KEY` is used for telemetry and health tracking,
     and `SECRET` is used to sign access tokens.
   - `ADMIN_EMAIL` and `ADMIN_PASSWORD` is the initial admin user credentials on first launch.
+  - `DB_CLIENT` and `DB_FILENAME` are defining the connection to your database.
   - `WEBSOCKETS_ENABLED` is not required, but enables [Directus Realtime](/guides/real-time/getting-started/index.html).
 
 The volumes section is not required, but without this, our database and file uploads will be destroyed when the Docker
@@ -63,10 +71,27 @@ file.
 
 ## Run Directus
 
-Run the following in your terminal:
+::: tabs
+
+== macOS/Linux
+
+Open the Terminal and run the following commands one line at a time:
 
 ```
+cd Desktop/directus
 docker compose up
 ```
 
-Directus should now be available at http://0.0.0.0:8055
+== Windows
+
+Open the Command Line and run the following commands one line at a time:
+
+```
+cd Desktop\directus
+docker compose up
+```
+
+:::
+
+Directus should now be available at <a href="http://localhost:8055" target="_blank">http://localhost:8055</a> or
+<a href="http://127.0.0.1:8055" target="_blank">http://127.0.0.1:8055</a>
